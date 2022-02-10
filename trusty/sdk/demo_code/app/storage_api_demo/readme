@@ -1,0 +1,8 @@
+sprdtee storage api使用方式demo：
+1、stgdemo是ta代码，在相应平台的sdk中编译后签名，push到vendor/firmware,
+    注意文件名使用stgdemo.elf
+2、stgdemo_ca是ca代码，在相应平台的源码环境下编译出可执行文件，push到vendor/bin，
+    也可尝试使用bin/目录下提供的文件
+3、常规存储/rpmb存储 使用方式差异不大，注意在open session时选择不同的port
+    常规存储：storage_open_session(&session_write, STORAGE_CLIENT_TD_PORT);
+    rpmb：storage_open_session(&session_write, STORAGE_CLIENT_TP_PORT);
